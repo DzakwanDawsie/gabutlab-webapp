@@ -8,7 +8,7 @@ const showLoginForm = (onClickSignUp: () => void) => {
   return <>
     <LoginForm/>
     <span>
-      Don't have account yet? <a href="#" onClick={onClickSignUp}>Sign Up</a>
+      Don&apos;t have account yet? <a href="#" onClick={onClickSignUp}>Sign Up</a>
     </span>
   </>
 }

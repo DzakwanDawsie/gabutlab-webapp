@@ -9,9 +9,9 @@ async function Slider() {
   return (
     <div className="slider-container">
       <div className="slider">
-        {banners.map(banner => {
-          return <div className="slide">
-                <img src={banner.photo}/>
+        {banners.map((banner, index) => {
+          return <div key={index} className="slide">
+                <img src={banner.photo} alt="Banner"/>
               </div>
         })}
       </div>
