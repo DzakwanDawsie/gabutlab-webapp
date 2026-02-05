@@ -11,7 +11,7 @@ async function Slider() {
       <div className="slider">
         {banners.map(banner => {
           return <div className="slide">
-                <img src={Config.API_URL.concat('/uploads/', banner.photo)}/>
+                <img src={banner.photo}/>
               </div>
         })}
       </div>

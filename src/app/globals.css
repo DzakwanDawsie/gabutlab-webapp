@@ -334,3 +334,169 @@ footer > div > a > span {
   background-color: var(--color-level-tertiary);
   outline: none;
 }
+
+/* Create Post Form Styles */
+.create-post-container {
+  padding: 30px;
+}
+
+.create-post-container .page-title {
+  color: var(--color-level-text);
+  font-size: 28px;
+  margin: 0 0 30px 0;
+}
+
+.create-post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.create-post-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.create-post-form .form-group label {
+  color: var(--color-level-text);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.create-post-form .form-group input[type="text"],
+.create-post-form .form-group input[type="file"] {
+  padding: 12px 16px;
+  font-size: 16px;
+  color: var(--color-level-text);
+  border: 1px solid var(--color-level-tertiary);
+  border-radius: 8px;
+  background-color: var(--color-level-tertiary);
+  outline: none;
+}
+
+.create-post-form .form-group input[type="text"]:focus {
+  border-color: var(--color-level-link);
+}
+
+.create-post-form .form-group input[type="file"] {
+  cursor: pointer;
+}
+
+/* React Quill Styles Override */
+.create-post-form .ql-container {
+  min-height: 200px;
+  background-color: var(--color-level-tertiary);
+  border-color: var(--color-level-tertiary);
+  border-radius: 0 0 8px 8px;
+}
+
+.create-post-form .ql-toolbar {
+  background-color: var(--color-level-primary);
+  border-color: var(--color-level-tertiary);
+  border-radius: 8px 8px 0 0;
+}
+
+.create-post-form .ql-toolbar button,
+.create-post-form .ql-toolbar .ql-picker-label {
+  color: var(--color-level-text);
+}
+
+.create-post-form .ql-toolbar button:hover,
+.create-post-form .ql-toolbar .ql-picker-label:hover {
+  color: var(--color-level-link);
+}
+
+.create-post-form .ql-toolbar button.ql-active,
+.create-post-form .ql-toolbar .ql-picker-label.ql-active {
+  color: var(--color-level-link);
+}
+
+.create-post-form .ql-editor {
+  color: var(--color-level-text);
+  font-size: 16px;
+}
+
+.create-post-form .ql-editor.ql-blank::before {
+  color: var(--color-level-hint);
+}
+
+/* Image Preview */
+.create-post-form .image-preview {
+  margin-top: 10px;
+  max-width: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.create-post-form .image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Topics Selector */
+.create-post-form .topics-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.create-post-form .topic-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: var(--color-level-hint);
+  background-color: var(--color-level-tertiary);
+  border: 2px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.create-post-form .topic-btn:hover {
+  color: var(--color-level-text);
+  border-color: var(--color-level-link);
+}
+
+.create-post-form .topic-btn.selected {
+  color: var(--color-level-text);
+  background-color: var(--color-level-link);
+  border-color: var(--color-level-link);
+}
+
+/* Submit Button */
+.create-post-form .submit-btn {
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-level-text);
+  background-color: #303F9F;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.create-post-form .submit-btn:hover {
+  background-color: #3949AB;
+}
+
+/* Create Post Button in Header */
+.create-post-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  color: var(--color-level-text);
+  background-color: #303F9F;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.create-post-link:hover {
+  background-color: #3949AB;
+}

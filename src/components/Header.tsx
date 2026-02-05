@@ -7,6 +7,7 @@ function Header() {
       <div className="header-navbar">
         <ul>
           <li><a href="/">Home</a></li>
+          <li><a href="/create-post" className="create-post-link">+ Create Post</a></li>
         </ul>
       </div>
       <div className="header-searchbar">

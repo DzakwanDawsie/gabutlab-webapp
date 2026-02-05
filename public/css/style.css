@@ -1123,3 +1123,219 @@ footer > div > a > span {
 .toast.show {
   opacity: 1;
 }
+
+/* ===== Create Post Form Styles ===== */
+.create-post-container {
+  padding: 30px;
+}
+
+.create-post-container .page-title {
+  color: var(--color-level-text);
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+}
+
+.create-post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.create-post-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.create-post-form .form-group label {
+  color: var(--color-level-text);
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+}
+
+.create-post-form .form-group input[type="text"] {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 16px;
+  color: var(--color-level-text);
+  border: 2px solid var(--color-level-tertiary);
+  border-radius: 10px;
+  background-color: var(--color-level-tertiary);
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.create-post-form .form-group input[type="text"]:focus {
+  border-color: var(--color-level-link);
+}
+
+.create-post-form .form-group input[type="text"]::placeholder {
+  color: var(--color-level-hint);
+}
+
+.create-post-form .form-group input[type="file"] {
+  padding: 14px 18px;
+  font-size: 14px;
+  color: var(--color-level-text);
+  border: 2px dashed var(--color-level-tertiary);
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.create-post-form .form-group input[type="file"]:hover {
+  border-color: var(--color-level-link);
+}
+
+/* React Quill Editor Styles */
+.create-post-form .quill {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.create-post-form .ql-toolbar {
+  background-color: var(--color-level-primary);
+  border: 2px solid var(--color-level-tertiary) !important;
+  border-bottom: 1px solid var(--color-level-tertiary) !important;
+  border-radius: 10px 10px 0 0;
+  padding: 12px !important;
+}
+
+.create-post-form .ql-toolbar .ql-stroke {
+  stroke: var(--color-level-text);
+}
+
+.create-post-form .ql-toolbar .ql-fill {
+  fill: var(--color-level-text);
+}
+
+.create-post-form .ql-toolbar .ql-picker {
+  color: var(--color-level-text);
+}
+
+.create-post-form .ql-toolbar .ql-picker-options {
+  background-color: var(--color-level-seconday);
+  border-color: var(--color-level-tertiary);
+}
+
+.create-post-form .ql-toolbar button:hover .ql-stroke,
+.create-post-form .ql-toolbar button.ql-active .ql-stroke {
+  stroke: var(--color-level-link);
+}
+
+.create-post-form .ql-toolbar button:hover .ql-fill,
+.create-post-form .ql-toolbar button.ql-active .ql-fill {
+  fill: var(--color-level-link);
+}
+
+.create-post-form .ql-container {
+  min-height: 250px;
+  background-color: var(--color-level-tertiary);
+  border: 2px solid var(--color-level-tertiary) !important;
+  border-top: none !important;
+  border-radius: 0 0 10px 10px;
+  font-size: 16px;
+}
+
+.create-post-form .ql-editor {
+  color: var(--color-level-text);
+  min-height: 200px;
+  padding: 16px;
+  line-height: 1.6;
+}
+
+.create-post-form .ql-editor.ql-blank::before {
+  color: var(--color-level-hint);
+  font-style: normal;
+}
+
+/* Image Preview */
+.create-post-form .image-preview {
+  margin-top: 12px;
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid var(--color-level-tertiary);
+}
+
+.create-post-form .image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Topics Selector */
+.create-post-form .topics-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.create-post-form .topic-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-level-hint);
+  background-color: var(--color-level-tertiary);
+  border: 2px solid transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.create-post-form .topic-btn:hover {
+  color: var(--color-level-text);
+  border-color: var(--color-level-link);
+}
+
+.create-post-form .topic-btn.selected {
+  color: var(--color-level-text);
+  background-color: var(--color-level-link);
+  border-color: var(--color-level-link);
+}
+
+/* Submit Button */
+.create-post-form .submit-btn {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-level-text);
+  background-color: #303F9F;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+.create-post-form .submit-btn:hover {
+  background-color: #3949AB;
+}
+
+.create-post-form .submit-btn:active {
+  background-color: #283593;
+}
+
+/* Create Post Link in Header */
+.create-post-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px !important;
+  color: var(--color-level-text) !important;
+  background-color: #303F9F;
+  border-radius: 8px;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.create-post-link:hover {
+  background-color: #3949AB;
+}

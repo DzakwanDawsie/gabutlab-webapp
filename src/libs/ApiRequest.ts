@@ -39,7 +39,7 @@ export const getPosts = async (params: any) => {
   const rawPosts: Post[] = response.data.posts || [];
 
   const posts = rawPosts.map(post => {
-    post.photo = encodeURI(Config.API_URL.concat(`/uploads/${post.photo}`));
+    // post.photo = encodeURI(Config.API_URL.concat(`/uploads/${post.photo}`));
 
     return post;
   });
@@ -56,7 +56,7 @@ export const getPostById = async (id: number) => {
   if (!response.data) return null;
 
   const post: Post = response.data.post || null;
-  post.photo = encodeURI(Config.API_URL.concat(`/uploads/${post.photo}`));
+  // post.photo = encodeURI(Config.API_URL.concat(`/uploads/${post.photo}`));
 
   return post;
 }
@@ -103,4 +103,28 @@ export const getBanners = async () => {
   const banners: Banner[] = response.data.banners || [];
 
   return banners;
+}
+
+export const getTopics = async () => {
+  const axiosResponse = await axios.get(Config.API_URL + '/topics');
+  const response: ResponseApi = axiosResponse.data;
+
+  if (!response.success) return [];
+  
+  if (!response.data) return [];
+
+  const topics: Topic[] = response.data.topics || [];
+
+  return topics;
+}
+
+export const createPost = async (formData: FormData) => {
+  const axiosResponse = await axios.post(Config.API_URL + '/posts', formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data',
+    },
+  });
+  const response: ResponseApi = axiosResponse.data;
+
+  return response;
 }
